@@ -165,7 +165,7 @@ vector<STPoint> ForwardSweep(vector<STPoint> tailEventSet, vector<STPoint> insta
 	return joinResult;
 }
 
-void Miner()
+void Miner() //Top-ST-Miner
 {
 	for(int i = 0; i < sortedDataset.size(); i++) //create 1-length sequences
 	{
@@ -182,7 +182,7 @@ void Miner()
 	}
 }
 
-void ExpandSequence(Sequence seq)
+void ExpandSequence(Sequence seq) //Top-ST-Miner expand procedure
 {
 	for(int i = 0; i < sortedDataset.size(); i++)
 	{
@@ -258,7 +258,7 @@ double CalculateDR(vector<STPoint> tailSet, vector<STPoint> joinSet, vector<STPo
 
 //################################################################
 
-//Alternatywny sposób mikrogrupowania
+//Alternatywny sposÃ³b mikrogrupowania
 
 int FindMinimalCluster(vector<MCEntry> clusters, STPoint instance)
 {
@@ -685,7 +685,7 @@ void MinerMC()
 
 //##################################################################
 
-void LoadDataset(string Path) //za³aduj zbiór danych
+void LoadDataset(string Path) //zaÂ³aduj zbiÃ³r danych
 {
 	size = CountInstances(Path); // zlicz l. instancji w pliku
 	data = new STPoint[size]; // rozszerz data
@@ -807,7 +807,7 @@ void ClearStructures()
 	sortedMCindex.clear();
 }
 
-int CountInstances(string path) // zlicz liczbê instancji w pliku
+int CountInstances(string path) // zlicz liczbÃª instancji w pliku
 {
 	uchwyt.open(path);
 	string line;
